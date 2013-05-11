@@ -1,2 +1,0 @@
-<?php $arrValues = deserialize($this->raw); ?>
-<?php echo $this->replaceInsertTags($arrValues[1]); ?> 

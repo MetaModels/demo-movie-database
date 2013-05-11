@@ -1,4 +1,0 @@
-<fieldset class="tl_subdca">
-<legend><?php echo $this->generateLabel(); echo $this->xlabel; ?></legend>
-  <?php echo $this->generateWithError(true); ?>
-</fieldset>
