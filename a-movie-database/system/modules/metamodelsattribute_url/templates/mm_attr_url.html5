@@ -1,0 +1,2 @@
+<?php $arrValues = deserialize($this->raw); ?>
+<span class="url"><a target="_blank" href="<?php echo $this->replaceInsertTags($arrValues[1]); ?>"><?php echo $arrValues[0]; ?></a></span>

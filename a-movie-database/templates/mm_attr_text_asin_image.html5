@@ -1,0 +1,18 @@
+<?php
+switch ($this->attribute->getMetaModel()->getActiveLanguage())
+{
+  case 'de':
+    $langcode = '03';
+    break;
+  case 'fr':
+    $langcode = '08';
+    break;
+  case 'jp':
+    $langcode = '09';
+
+  default:
+    $langcode = '01';
+}
+?>
+
+<img alt="" src="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>._SCMZZZZZZZ_.jpg" />

@@ -1,0 +1,12 @@
+<?php if (count($this->raw)): ?>
+<?php
+$arrTextFormat = array();
+
+foreach ($this->raw as $arrTag)
+{
+	$arrTextFormat[] = $arrTag[$this->value];
+}
+
+echo implode(', ', $arrTextFormat);
+?>
+<?php endif; ?>

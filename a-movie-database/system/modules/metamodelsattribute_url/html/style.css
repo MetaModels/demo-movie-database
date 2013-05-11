@@ -1,0 +1,18 @@
+  .metamodelsattribute_url div {
+    width:95%;
+    display:inline-block;
+  }
+
+  .metamodelsattribute_url div input:first-child {
+    width:70%;
+  }
+
+  .metamodelsattribute_url div input:last-child {
+    width:27%;
+  }
+
+  .metamodelsattribute_url img {
+    display:inline-block;
+    vertical-align:top; 
+    cursor:pointer;
+  }

@@ -1,0 +1,1 @@
+<?php if (is_array($this->raw['gp_countries'])): ?><?php echo $GLOBALS['TL_LANG']['tl_metamodel_attribute'][$this->value[gp_mode]]; ?>: <?php echo strtoupper(implode(',', $this->value[gp_countries]));?><?php endif; ?>

@@ -1,0 +1,23 @@
+<ul>
+<?php foreach($this->src as $arrFile): ?>
+<li class="<?php echo $arrFile['class']; ?>">
+<?php if ($this->settings->file_showLink): ?>
+	<?php if ($this->settings->file_showImage): ?>
+		<a data-lightbox="<?php echo $arrFile['lb']; ?>" title="<?php echo $arrFile['alt']; ?>" href="<?php echo $arrFile['file']; ?>">
+	<?php else: ?>
+		<a title="<?php echo $arrFile['alt']; ?>" href="<?php echo $arrFile['url']; ?>">
+	<?php endif; ?>
+<?php endif; ?>
+<?php if ($this->settings->file_showImage): ?>
+	<?php if ($arrFile['isGdImage']): ?>
+		<?php echo $this->generateImage($arrFile['src'], $arrFile['caption']); ?>
+	<?php endif; ?>
+<?php else: ?>
+	<img src="<?php echo $arrFile['icon']; ?>" alt="" /> <?php echo $arrFile['alt']?$arrFile['alt']:$arrFile['file']; ?> <?php echo $arrFile['sizetext']; ?>
+<?php endif; ?>
+<?php if ($this->settings->file_showLink): ?>
+	</a>
+<?php endif; ?>
+</li>
+<?php endforeach; ?>
+</ul>

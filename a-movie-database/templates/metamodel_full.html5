@@ -1,0 +1,48 @@
+<?php $strRendersettings = ($this->settings)? 'settings' : 'view'; ?>
+
+<?php if (count($this->data)): ?>
+
+<div class="layout_full">
+
+<?php foreach ($this->data as $arrItem): ?>
+<?php $GLOBALS['objPage']->title = $arrItem['text']['title']; ?>
+<div class="item <?php echo $arrItem['class']; ?>">
+
+<h2><?php echo $arrItem['html5']['title']; ?></h2>
+
+<p class="date"><?php echo $arrItem['html5']['releasedate']; ?></p>
+
+<div class="content">
+<?php if($arrItem['html5']['asin']): ?>
+<figure class="image_container">
+<?php echo $arrItem['html5']['asin']; ?>
+</figure>
+<?php endif; ?>
+
+<?php echo $arrItem['html5']['description']; ?>
+</div>
+
+<?php if($arrItem['html5']['youtube']): ?>
+<div class="trailer">
+<?php echo $arrItem['html5']['youtube']; ?>
+</div>
+<?php endif; ?>
+
+<?php if($arrItem['raw']['genre']): ?>
+<div class="genre">
+<p><?php echo $GLOBALS['TL_LANG']['tl_custom']['mm_tags']; ?></p>
+<?php foreach ($arrItem['raw']['genre'] as $genre): ?>
+    <a href="{{link_url::12}}/genre/<?php echo $genre['internal_name']; ?>"><?php echo $genre['internal_name']; ?></a>
+<?php endforeach;  ?>
+</div>
+<?php endif; ?>
+
+<?php if ($arrItem['jumpTo']['deep']): ?>
+<a href="<?php echo $arrItem['jumpTo']['url']; ?>"><?php echo $this->details; ?></a>
+<?php endif; ?>
+</div>
+<?php endforeach; ?>
+</div>
+<?php else: ?>
+<p class="info"><?php echo $this->noItemsMsg; ?></p>
+<?php endif; ?>

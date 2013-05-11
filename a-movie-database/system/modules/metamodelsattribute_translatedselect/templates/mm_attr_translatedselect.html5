@@ -1,0 +1,3 @@
+<?php
+echo $this->raw[$this->attribute->get('select_column')];
+?>

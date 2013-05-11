@@ -1,0 +1,46 @@
+@media screen, projection {
+
+ /**
+  * Normalize contao styles
+  */
+
+  .mod_article ul, 
+  .mod_article ol { 
+    list-style:disc; 
+    padding:0 0 0 20px; 
+    margin:5px 10px 5px;
+  }
+  
+  .data ul { 
+    margin:5px 0;
+    padding-left:0;
+    list-style:none;
+  }
+
+  .mod_article ol { 
+    list-style:decimal;
+  }
+
+  .mod_article li { 
+    padding:1px 0; 
+  }
+
+  .data span { 
+    float:left;
+    width:55px;
+  }
+
+  .main p {
+    padding:8px 0;
+  }
+  
+ /*------------------------------------------------------------------------*/
+
+  nav ul,
+  .mod_sitemap ul,
+  .pagination ul {
+    margin:0;
+    padding:0;
+  }
+
+}

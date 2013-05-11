@@ -1,0 +1,3 @@
+
+  <h2 class="explanation_headline"><?php echo $this->generateLabel(); echo $this->xlabel; ?></h2>
+  <?php echo $this->generateWithError(true); ?>

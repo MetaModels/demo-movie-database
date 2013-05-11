@@ -1,0 +1,8 @@
+<?php if (is_array($this->raw)): ?>
+<?php foreach($this->raw as $file): ?>
+<?php echo $file; ?>
+<?php endforeach; ?>
+<?php else : ?>
+<?php echo $this->raw; ?>
+<?php endif; ?>
+

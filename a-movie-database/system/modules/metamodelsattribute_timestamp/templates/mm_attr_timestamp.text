@@ -1,0 +1,7 @@
+<?php if ($this->raw !== null): ?>
+<?php if($this->attribute->get('timetype') == 'date'):?>
+<?php echo date($GLOBALS['TL_CONFIG']['dateFormat'], $this->raw); ?>
+<?php elseif($this->attribute->get('timetype') == 'datim'): ?>
+<?php echo date($GLOBALS['TL_CONFIG']['datimFormat'], $this->raw); ?>
+<?php endif; ?>
+<?php endif; ?>

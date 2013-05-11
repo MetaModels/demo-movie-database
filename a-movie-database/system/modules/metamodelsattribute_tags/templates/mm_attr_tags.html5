@@ -1,0 +1,24 @@
+<?php if (count($this->raw) > 0): ?>
+<ul>
+<?php $i=0; $last=count($this->tags)-1; 
+foreach ($this->raw as $arrTag):
+	$arrClass = array();
+	if($i==0)
+	{
+		$arrClass[] = 'first';
+	}
+	if($i==$last)
+	{
+		$arrClass[] = 'last';
+	}
+	$arrClass[] = ((($i++ % 2)==0) ? 'even' : 'odd');
+
+	if ($this->alias && $arrTag[$this->alias] && !is_numeric($arrTag[$this->alias]))
+	{
+		$arrClass[] = standardize($arrTag[$this->alias]);
+	}
+?>
+<li class="<?php echo implode(' ', $arrClass); ?>"><?php echo $arrTag[$this->value]; ?></li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
