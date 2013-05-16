@@ -15,4 +15,4 @@ switch ($this->attribute->getMetaModel()->getActiveLanguage())
 }
 ?>
 
-<a alt="" data-lightbox href="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg"><img width="220" src="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg" /></a>
+<a data-lightbox href="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg"><img alt="" width="220" src="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg" /></a>

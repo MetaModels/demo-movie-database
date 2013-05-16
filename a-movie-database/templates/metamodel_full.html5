@@ -19,7 +19,7 @@
 </figure>
 <?php endif; ?>
 
-<?php echo $arrItem['html5']['description']; ?>
+<?php echo $arrItem['raw']['description']['value']; ?>
 </div>
 
 <?php if($arrItem['html5']['youtube']): ?>
