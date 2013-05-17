@@ -1,0 +1,18 @@
+<?php
+switch ($this->attribute->getMetaModel()->getActiveLanguage())
+{
+  case 'de':
+    $langcode = '03';
+    break;
+  case 'fr':
+    $langcode = '08';
+    break;
+  case 'jp':
+    $langcode = '09';
+
+  default:
+    $langcode = '01';
+}
+?>
+
+<a alt="" data-lightbox href="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg"><img width="220" src="http://images.amazon.com/images/P/<?php echo $this->raw; ?>.<?php echo $langcode; ?>_SCLZZZZZZZ_.jpg" /></a>
