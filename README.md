@@ -1,12 +1,20 @@
 MetaModel Websites
 ==================
 
-Demo 1: A movie database
-------------------------
+A movie database
+----------------
 
 http://now.metamodel.me/a-movie-database/
 
-This are only the changed files from the demo. For MetaModels, please download the nightly builds from our project website. For Contao, download the Version 2.11.11 from contao.org!
+### Login
 
 * User: k.jones
 * Pass: kevinjones
+
+### How to use
+
+* Install contao (as usual)
+* Install stable nightly release
+* Copy the demo installer into the fresh contao installation
+* Run the installer and click the "import" button
+* Have fun
