@@ -44,6 +44,7 @@ $GLOBALS['BE_MOD']['metamodels']['mm_demo_movie_database'] = array
 
 		'needed_extensions' => array
 		(
+			'system/modules/metamodelsattribute_combinedvalues',
 			'system/modules/metamodelsattribute_text',
 			'system/modules/metamodelsattribute_tags',
 			'system/modules/metamodelsattribute_timestamp',
