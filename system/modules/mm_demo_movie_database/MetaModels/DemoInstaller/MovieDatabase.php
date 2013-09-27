@@ -6,31 +6,20 @@
  * data in each collection.
  *
  * PHP version 5
- * @package	   Demo Installer
+ * @package    Movie Database
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource
  */
 
-class DemoInstallTaskDropTable extends DemoInstallTask
+namespace MetaModels\DemoInstaller;
+
+class MovieDatabase extends DemoInstaller
 {
-	protected $table;
-
-	public function __construct(DemoInstaller $installer, $table)
+	public function __construct()
 	{
-		parent::__construct($installer);
-
-		$this->table = $table;
-	}
-
-	public function run()
-	{
-		Database::getInstance()->executeUncached('DROP TABLE ' . $this->table);
-	}
-
-	public function getDescription()
-	{
-		return sprintf($GLOBALS['TL_LANG']['mm_demo']['drop_table'], $this->table);
+		parent::__construct();
+		$this->setName('mm_demo_movie_database');
 	}
 }

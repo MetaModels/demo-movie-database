@@ -14,11 +14,13 @@
  * @filesource
  */
 
+$GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__);
+
 $GLOBALS['BE_MOD']['metamodels']['mm_demo_movie_database'] = array
 (
-	'callback'        => 'MovieDatabaseDemoInstaller',
+	'callback'        => 'MetaModels\DemoInstaller\MovieDatabase',
 	'icon'            => 'system/modules/mm_demo_movie_database/html/icon.png',
-	'stylesheet'      => 'system/modules/mm_demo_movie_database/html/style.css',
+	'stylesheet'      => 'system/modules/metamodels_demo_installer/html/style.css',
 	'mm_demo_content' => array
 	(
 		'user'        => 1,
@@ -58,6 +60,6 @@ $GLOBALS['BE_MOD']['metamodels']['mm_demo_movie_database'] = array
 			'system/modules/metamodelsattribute_rating',
 			'system/modules/generalDriver',
 		),
-		'needed_core'       => '2.11'
+		'needed_core'       => array('2.11', '3.1')
 	)
 );

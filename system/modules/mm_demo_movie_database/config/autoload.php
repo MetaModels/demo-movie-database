@@ -6,23 +6,26 @@
  * data in each collection.
  *
  * PHP version 5
- * @package	   Demo Installer
+ * @package    Demo Installer
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource
  */
 
-abstract class DemoInstallTask
-{
-	protected $installer;
+/**
+ * Register the classes
+ */
+ClassLoader::addClasses(array
+(
+	'MetaModels\DemoInstaller\MovieDatabase' => 'system/modules/mm_demo_movie_database/MetaModels/DemoInstaller/MovieDatabase.php',
+));
 
-	public function __construct(DemoInstaller $installer)
-	{
-		$this->installer = $installer;
-	}
 
-	abstract function run();
-
-	abstract function getDescription();
-}
+/**
+ * Register the templates
+ */
+TemplateLoader::addFiles(array
+(
+	'demo_installer' => 'system/modules/mm_demo_movie_database/templates',
+));

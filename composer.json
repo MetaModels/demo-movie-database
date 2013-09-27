@@ -1,0 +1,74 @@
+{
+	"name": "metamodels/demo-movie-database",
+	"description": "MetaModels demo movie-database",
+	"keywords":["contao", "metamodels", "demo"],
+	"type":"contao-module",
+	"homepage":"http://now.metamodel.me/",
+	"license":"LGPL-3.0+",
+	"authors": [
+		{
+			"name":"Christian Schiffler",
+			"email":"c.schiffler@cyberspectrum.de",
+			"homepage":"http://www.cyberspectrum.de",
+			"role":"Developer"
+		},
+		{
+			"name":"Andreas Isaak",
+			"email":"info@andreas-isaak.de",
+			"homepage":"http://www.andreas-isaak.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"mail@metamodel.me",
+		"issues":"https://github.com/MetaModels/demo-movie-database/issues",
+		"wiki":"http://de.contaowiki.org/MetaModels",
+		"irc":"irc://irc.freenode.org/contao.mm",
+		"source":"https://github.com/MetaModels/demo-movie-database"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core": ">=2.11,<4.0",
+		"contao-community-alliance/composer-installer": "*",
+		"metamodels/core":"1.*",
+		"metamodels/demo-installer": "~1",
+		"metamodels/attribute_combinedvalues": "*",
+		"metamodels/attribute_text": "*",
+		"metamodels/attribute_tags": "*",
+		"metamodels/attribute_timestamp": "*",
+		"metamodels/attribute_country": "*",
+		"metamodels/attribute_file": "*",
+		"metamodels/attribute_translatedalias": "*",
+		"metamodels/attribute_checkbox": "*",
+		"metamodels/attribute_url": "*",
+		"metamodels/attribute_translatedtext": "*",
+		"metamodels/attribute_translatedlongtext": "*",
+		"metamodels/attribute_rating": "*"
+	},
+	"require-dev": {
+		"metamodels/php-coding-standard":"1.0.*@dev",
+		"cyberspectrum/contao-toolbox": "1.0.*@dev"
+	},
+	"conflict": {
+		"contao/core": "3.0.*"
+	},
+	"autoload": {
+		"classmap": ["system"]
+	},
+	"extra":{
+		"contao": {
+			"symlinks":{
+				"system/modules/mm_demo_movie_database":"system/modules/mm_demo_movie_database"
+			},
+			"transifex": {
+				"project": "metamodels",
+				"prefix": "demo-movie-database-",
+				"languages_cto": "system/modules/mm_demo_movie_database/languages",
+				"languages_tx": ".tx"
+			}
+		},
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}
